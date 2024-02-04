@@ -1,10 +1,9 @@
 CC=gcc
 CFLAGS=--std=c99 -Wall -ggdb
-LIBS=`pkg-config --libs raylib`
+LIBS=`pkg-config --libs raylib` -lm
 BUILDIR=build
 
 .PHONY: run clean
-
 run: game
 	@$(BUILDIR)/$<
 
